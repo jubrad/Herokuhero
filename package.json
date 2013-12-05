@@ -1,0 +1,19 @@
+{
+  "name": "pinger",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~3.4.4",
+    "sleep": "~1.1.2",
+    "foundation": "~4.2.1-1",
+    "jade": "~0.35.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}

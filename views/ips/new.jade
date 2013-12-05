@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  div
+    form(action='/ips/create',method='post')
+      p
+        input(id='ip',type='string',placeholder='Enter an ip or url',name='ip')
+      p
+        button(id='submit',type='submit').submit-button
+
+      
