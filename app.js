@@ -21,7 +21,7 @@ app.configure(function(){
 /*
 	database connection
 */
-var MongoClient = require('mongodb').MongoClient
+var MongoClient = require('mongodb')
 
 MongoClient.connect('mongodb://localhost:27017/ipdb', function (error, db) {
   if(error) {
