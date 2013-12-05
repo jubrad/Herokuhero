@@ -21,9 +21,9 @@ app.configure(function(){
 /*
 	database connection
 */
-var MongoClient = require('mongodb')
+var MongoClient = require('mongodb').MongoClient
 
-MongoClient.connect('mongodb://localhost:27017/ipdb', function (error, db) {
+MongoClient.connect(app.config.database.uri, function (error, db) {
   if(error) {
     console.log("Error connecting to database: " + error.toString().replace("Error: ",""));
   } 
