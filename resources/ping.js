@@ -5,7 +5,7 @@ module.exports = function(app) {
 	//accessing the model
 	var IpModel = app.models.IpModel;
 	//this program will fire every 5 minutes
-	var minutesToWait = 5;
+	var minutesToWait = 1;
 
 
 
