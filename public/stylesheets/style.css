@@ -1,0 +1,35 @@
+/*
+white:      #eeeced
+light gray: #8e8e8e
+orange:     #f27931
+blue:       #007bd1
+green:      #7eb329
+dark gray:  #3e3e3e
+    -->*/
+
+body {
+	text-align:center;
+	background-color: #8e8e8e;
+}
+.container {
+	background-color: #eeeced;
+	padding-bottom: 40px;
+}
+.form-container {
+	border-radius:5px;
+	padding: 10px;
+	padding-bottom: 30px;
+	background-color: #3e3e3e;
+	color: #eeeced;
+}
+.form-label {
+	text-align:left;
+	margin-top:0px;
+}
+.header {
+	padding: 40px;
+}
+
+footer {
+	padding: 10px;
+}
