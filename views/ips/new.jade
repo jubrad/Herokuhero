@@ -1,11 +1,32 @@
 extends ../layout
 
 block content
-  div
-    form(action='/ips/create',method='post')
-      p
-        input(id='ip',type='string',placeholder='Enter an ip or url',name='ip')
-      p
-        button(id='submit',type='submit').submit-button submit
-
-      
+  div.container
+    div.row.header
+      div.col-xs-12
+        h1 Heroku-Hero
+    div.row
+      div.col-xs-2
+      div.form-container.col-xs-8
+        h3.form-label just ping my site
+        form(action='/ips/create',method='post').form-inline
+          div.form-group
+            label.sr-only ip or url
+            input(id='ip',type='string',placeholder='ip or url',name='ip').form-control
+          button(id='submit',type='submit').btn.btn-default submit
+      div.col-xs-2
+    div.row  
+      h1 or
+    div.row
+      div.col-xs-2
+      div.form-container.col-xs-8
+        h3.form-label ping my site and notify me
+        form(action='/ips/create',method='post').form-inline
+          div.form-group
+            label.sr-only ip or url
+            input(id='ip',type='string',placeholder='ip or url',name='ip').form-control
+          div.form-group
+            label.sr-only email
+            input(id='email',type='string',placeholder='Enter an email address',name='email').form-control
+          button(id='submit',type='submit').btn.btn-default submit
+      div.col-xs-2
