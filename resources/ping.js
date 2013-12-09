@@ -5,7 +5,7 @@ module.exports = function(app) {
 	//accessing the model
 	var IpModel = app.models.IpModel;
 	//this program will fire every 5 minutes
-	var minutesToWait = 1;
+	var minutesToWait = 30;
 
 
 
@@ -54,11 +54,25 @@ console.log('pinging loop has been called')
 	        	for(i=0;i<ips.length;i++){
 	        		var ip=ips[i]['ip']
 	        		console.log('sending get request to ' + ip);
-	        		setTimeout(httpGet(ip),600);
+	        		httpGet(ip,function(res){
+	        			if (res != 200){
+
+	        			}
+	        		});
 	        	}
 	        }
 		});
-	},minutesToWait * 1000*60);
+	},3000);//60000*minutesToWait);
+
+
+	function intensiveCheck(ip){
+		setInterval(function() {
+	 		setTimeout(httpGet(ip),2000);
+		},1000*60);
+	}
+
+
+
 /*
 	because it only seems right to call this a resource
 */
